@@ -8,5 +8,14 @@
     "tags": {
       "language": "C#",
       "type": "project"
-    }
+    },
+    "sources": [
+      {
+        "modifiers": [
+          {
+            "exclude": [ ".vscode/**", ".git/**", "README.md", ".gitignore"]
+          }
+        ]
+      }      
+    ]
   }
