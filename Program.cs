@@ -8,6 +8,15 @@ class Program
 {
     static async Task Main(string[] args)
     {
+        var builder = WebApplicationHost.CreateDefaultBuilder(args);
 
+        var app = builder.Build();
+
+        app.MapGet("/", async context =>
+        {
+            await context.Response.WriteAsync("Hello World!");
+        });
+
+        await app.RunAsync();
     }
 }
